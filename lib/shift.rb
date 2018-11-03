@@ -1,10 +1,12 @@
+require 'time'
+require './lib/key'
 class Shift
 
   attr_reader :key, :date
 
-  def initialize(key, date)
-    @key = key
-    @date = date
+  def initialize(key , date = nil)
+    @key =  key.number
+    @date = date || Time.now.strftime("%d%m%y")
   end
 
   def key_offset

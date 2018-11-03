@@ -1,9 +1,11 @@
 require_relative 'test_helper'
 require './lib/shift'
 
+
 class ShiftTest < Minitest::Test
   def setup
-    @shift = Shift.new("02715","040895")
+    key = Key.new("02715")
+    @shift = Shift.new(key,"040895")
   end
 
   def test_it_exists
@@ -16,6 +18,12 @@ class ShiftTest < Minitest::Test
 
   def test_it_has_date
     assert_equal "040895", @shift.date
+  end
+
+  def test_it_can_generate_time
+    key = Key.new("02715")
+    shift_2 = Shift.new(key)
+    assert_equal Time.now.strftime("%d%m%y"), shift_2.date
   end
 
   def test_it_can_make_key_into_offset
