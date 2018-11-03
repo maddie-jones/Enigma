@@ -20,7 +20,7 @@ class MessageTest < Minitest::Test
   end
 
   def test_it_can_assign_apha_intex_values
-      assert_equal [7, 8, 26, 4], @message.cell_index_values
+      assert_equal [[7, 4, 11, 11], [14, 26, 22, 14], [17, 11, 3, "!"]], @message.cell_index_values
   end
 
 end
