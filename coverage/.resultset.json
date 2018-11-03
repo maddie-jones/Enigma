@@ -1,0 +1,14 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/maddieg/turing/enigma/lib/enigma.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1541183130
+  }
+}
