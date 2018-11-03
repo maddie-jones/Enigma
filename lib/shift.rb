@@ -29,4 +29,11 @@ class Shift
     }
   end
 
+  def shift
+    date_offset.inject({}) do |total_offset,(key, value)|
+      total_offset[key] = key_offset[key] + value
+      total_offset
+    end
+  end
+
 end
