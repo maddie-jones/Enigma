@@ -7,4 +7,6 @@ class Shift
     @date = date
   end
 
+
+
 end

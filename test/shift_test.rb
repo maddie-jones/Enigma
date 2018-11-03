@@ -17,5 +17,9 @@ class ShiftTest < Minitest::Test
   def test_it_has_date
     assert_equal "040895", @shift.date
   end
-  
+
+  def test_it_can_make_key_into_offset
+    assert_equal ({"A"=> 2, "B" => 27, "C" => 71, "D" => 15}), @shift.offset_key
+  end
+
 end
