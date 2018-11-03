@@ -12,15 +12,15 @@ class MessageTest < Minitest::Test
   end
 
   def test_it_can_be_split_by_four
-    assert_equal ["hell", "o wor", "d!"], @message.split
+    assert_equal ["hell", "o wo", "rld!"], @message.split
   end
 
   def test_each_split_cell
-    assert_equal ["h", "e", "l", "l"], @message.split_cell
+    assert_equal [["h", "e", "l", "l"], ["o", " ", "w", "o"], ["r", "l", "d", "!"]], @message.split_cells
   end
 
   def test_it_can_assign_apha_intex_values
-      assert_equal [7, 8, 26, 4], @message.index_values
+      assert_equal [7, 8, 26, 4], @message.cell_index_values
   end
-  
+
 end
