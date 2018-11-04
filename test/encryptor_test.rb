@@ -18,4 +18,8 @@ class EncryptorTest < Minitest::Test
     assert_equal "keder ohulw!", @encryptor.new_encrypted_message
   end
 
+  def test_it_can_generate_new_index_message
+    assert_equal [[10, 31, 84, 31], [17, 53, 95, 34], [20, 38, 76, "!"]] , @encryptor.new_index_message
+  end
+
 end
