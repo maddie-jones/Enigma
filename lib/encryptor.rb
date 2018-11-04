@@ -9,7 +9,7 @@ class Encryptor
   def new_encrypted_message
      new_index_message.flatten.map do |index_cell|
        if index_cell.class == Integer
-         @alph[index_cell %27]
+         @alph[index_cell % 27]
        else
          index_cell
        end

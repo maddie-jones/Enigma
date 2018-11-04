@@ -1,9 +1,12 @@
+require './lib/message'
+require './lib/key'
+require './lib/shift'
 class Enigma
 
-  def encrypt(message, key, date)
+  def encrypt(message, key = nil, date = nil)
     message = Message.new(message)
     key = Key.new(key)
-    date = Date.new(date)
+    shift = Shift.new(key, date)
   end
-  
+
 end
