@@ -10,8 +10,8 @@ class Enigma
     indexed_message = message.cell_index_values
     shift= Shift.new(key, date)
     encryptor = Encryptor.new(indexed_message, shift)
-    { encryption: encryptor.new_encrypted_message("encrypt"),
-      key: key,
+    encrypted = { encryption: encryptor.new_encrypted_message("encrypt"),
+      key: shift.key,
       date: shift.date
       }
   end
