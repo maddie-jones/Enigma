@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-04T15:26:37-07:00">2018-11-04T15:26:37-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-04T15:31:50-07:00">2018-11-04T15:31:50-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -380,7 +380,7 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  def encrypt(message, key = nil, date = nil, direction)</code>
+          <code class="ruby">  def encrypt(message, key = nil, date = nil)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
@@ -416,7 +416,7 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">    { encryption: encryptor.new_encrypted_message(direction),</code>
+          <code class="ruby">    { encryption: encryptor.new_encrypted_message(&quot;encrypt&quot;),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -452,7 +452,7 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  def decrypt(message, key = nil, date = nil, direction)</code>
+          <code class="ruby">  def decrypt(message, key = nil, date = nil)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
@@ -488,7 +488,7 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">     { decryption: encryptor.new_encrypted_message(direction),</code>
+          <code class="ruby">     { decryption: encryptor.new_encrypted_message(&quot;decrypt&quot;),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
