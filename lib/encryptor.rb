@@ -19,7 +19,7 @@ class Encryptor
   def new_index_message
     @indexed_message.map do |indexed_cell|
       indexed_cell.map.with_index do |cell, index|
-        if cell.class == Integer
+        if cell.class == Integer 
           cell + @shift.values[index]
         else
           cell
