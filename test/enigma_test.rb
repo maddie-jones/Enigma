@@ -29,7 +29,6 @@ class EnigmaTest < Minitest::Test
     assert_equal expected, @enigma.encrypt("Hello world!")
   end
 
-
   def test_it_can_decrypt
     expected = {
       decryption: "hello world!",
@@ -50,6 +49,4 @@ class EnigmaTest < Minitest::Test
 
     assert_equal expected, @enigma.decrypt(encrypted[:encryption], "02715")
   end
-
-
 end
