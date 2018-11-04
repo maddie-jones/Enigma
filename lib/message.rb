@@ -1,5 +1,6 @@
 
 class Message
+
   def initialize(message)
     @message = message.downcase
   end
@@ -24,13 +25,12 @@ class Message
           alph.index(letter)
         end
       end
+    end
+  end
+end
 # plus = 9
 # nothing = ["N", "O", "T", "H", "I", "N", "G"]
 # alphabet = ('A'..'Z').to_a
 # # => ["A", "B", "C", "D", "E", ..., "Z"]
 # nothing.map { |d| alphabet.index(d) + 1 + plus }
 # # => [23, 24, 29, 17, 18, 23, 16]
-end
-  end
-
-end
