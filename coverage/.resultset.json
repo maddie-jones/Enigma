@@ -1,39 +1,23 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/maddieg/turing/enigma/lib/encryptor.rb": [
+      "/Users/maddieg/turing/enigma/lib/key.rb": [
+        null,
+        1,
         1,
         null,
-        4,
+        1,
         3,
-        3,
-        3,
-        null,
-        null,
-        1,
-        null,
-        12,
-        11,
-        null,
-        1,
-        null,
-        1,
         null,
         null,
         1,
         2,
-        6,
-        24,
-        22,
-        null,
         2,
-        null,
-        null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1541351275
+    "timestamp": 1541353625
   }
 }

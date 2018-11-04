@@ -2,9 +2,6 @@ require_relative 'test_helper.rb'
 require './lib/key'
 
 class KeyTest < Minitest::Test
-  # key = mock(key)
-  # key.stubs(:random_key).returns("02130")
-  # shift_3 = Shift.new(key)
   def test_it_exists
     key = Key.new
     assert_instance_of Key, key
