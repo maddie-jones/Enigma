@@ -4,8 +4,8 @@ class Shift
 
   attr_reader :key, :date
 
-  def initialize(key , date = nil)
-    @key =  key
+  def initialize(key = nil , date = nil)
+    @key =  key || Key.new.number
     @date = date || Time.now.strftime("%d%m%y")
   end
 
