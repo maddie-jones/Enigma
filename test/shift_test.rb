@@ -5,7 +5,7 @@ require './lib/shift'
 class ShiftTest < Minitest::Test
   def setup
     key = Key.new("02715")
-    @shift = Shift.new(key,"040895")
+    @shift = Shift.new(key.number,"040895")
   end
 
   def test_it_exists
