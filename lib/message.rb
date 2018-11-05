@@ -5,15 +5,12 @@ class Message
     @message = message.downcase
   end
 
-  def split
-    @message.scan(/..../)
+  def split_cells
+    split_message = []
+    @message.chars.each_slice(4) { |cell| split_message << cell}
+    split_message
   end
 
-  def split_cells
-    a = split.map do |cell|
-      cell.chars
-    end
-  end
 
   def cell_index_values
     split_cells.map do |split_cell|
