@@ -16,7 +16,6 @@ class Shift
       "C" => @key[2..3].to_i,
       "D" => @key[3..4].to_i
     }
-    # refactor as loop with group_by
   end
 
   def date_offset
