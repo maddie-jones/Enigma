@@ -7,25 +7,31 @@ class Encryptor
   end
 
   def new_encrypted_message(direction)
-     new_index_message(direction).flatten.map do |index_cell|
-       if index_cell.class == Integer
-         @alph[index_cell % 27]
-       else
-         index_cell
-       end
-     end.join
+    new_encrypted_letters(direction).join
+  end
+
+  def new_encrypted_letters(direction)
+    new_index_message(direction).flatten.map do |index_cell|
+      if index_cell.class == Integer
+        @alph[index_cell % 27]
+      else
+        index_cell
+      end
+    end
   end
 
   def new_index_message(direction)
     @indexed_message.map do |indexed_cell|
-      indexed_cell.map.with_index do |cell, index|
-        if cell.class == Integer && direction == "encrypt"
-          cell + @shift.values[index]
-        elsif cell.class == Integer && direction == "decrypt"
-          cell - @shift.values[index]
-        else
-          cell
-        end
+      new_indexed_cell(direction, indexed_cell)
+    end
+  end
+
+  def new_indexed_cell(direction, indexed_cell)
+    indexed_cell.map.with_index do |cell, index|
+      if cell.class == Integer
+        cell + (@shift.values[index] * direction)
+      else
+        cell
       end
     end
   end
